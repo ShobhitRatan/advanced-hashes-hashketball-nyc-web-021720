@@ -148,4 +148,11 @@ def team_colors(team_name)
       return value[:colors]
     end
   end
-end 
+end
+
+def team_names
+  teams = []
+  teams.append(game_hash[:home][:team_name])
+  teams.append(game_hash[:away][:team_name])
+  teams
+end
