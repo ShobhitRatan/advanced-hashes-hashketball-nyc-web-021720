@@ -167,5 +167,16 @@ def player_numbers(team_name)
       end
     end
   end
-  numbers 
+  numbers
 end
+
+def player_stats(name)
+  game_hash.each do |key, value|
+    value[:players].each do |n|
+      if n[:player_name] == name
+        n.delete(:player_name)
+        return n
+      end
+    end
+  end
+end 
