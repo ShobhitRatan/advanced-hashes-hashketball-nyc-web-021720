@@ -156,3 +156,15 @@ def team_names
   teams.append(game_hash[:away][:team_name])
   teams
 end
+
+def player_numbers(team_name)
+  numbers = []
+  game_hash.each do |key, value|
+    if team_name == value[:team_name]
+      value[:players].each do |n|
+        numbers.append(n[:number])
+        numbers
+      end
+    end
+  end
+end 
