@@ -117,5 +117,15 @@ def game_hash
       :slam_dunks => 12,
     }]}
     }
-    game_hash 
+    game_hash
 end
+
+def num_points_scored(player)
+  game_hash.each do |key, value|
+    value[:players].each do |n|
+      if n[:player_name] == player
+        return n[:points]
+      end
+    end
+  end
+end 
