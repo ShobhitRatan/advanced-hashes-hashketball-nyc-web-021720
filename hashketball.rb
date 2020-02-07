@@ -229,4 +229,4 @@ def winning_team
     win = game_hash[:away][:team_name]
   end
   win
-end 
+end
