@@ -210,23 +210,23 @@ def most_points_scored
     end
   end
   player
-end 
+end
 
-def winning_team 
+def winning_team
   home_team_points = 0
   away_team_points = 0
   win = ''
-  game_hash[:home][:players].each do |n| 
+  game_hash[:home][:players].each do |n|
     home_team_points += n[:points]
-  end 
-  game_hash[:away][:players].each do |n| 
+  end
+  game_hash[:away][:players].each do |n|
     away_team_points += n[:points]
-  end 
+  end
   puts "Home points are #{home_team_points} Away points #{away_team_points}"
-  if home_team_points > away_team_points 
+  if home_team_points > away_team_points
     win = game_hash[:home][:team_name]
-  else 
+  else
     win = game_hash[:away][:team_name]
-  end 
-  win 
+  end
+  win
 end 
